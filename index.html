@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="NAAEE第55屆年會專題：從環境教育的知識交流、活動設計、數位工具到收費與贊助制度。">
+<title>從自然學習走向集體行動｜NAAEE 2026 專題</title>
+<style>
+:root{--ink:#20352d;--muted:#64736b;--green:#315e4b;--lime:#c9d9a5;--cream:#f5f3eb;--paper:#fffefa;--line:#dce3d9;--orange:#d9794e}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,"Noto Sans TC","Microsoft JhengHei",sans-serif;line-height:1.8}
+a{color:#2c684e;text-underline-offset:3px}
+img{display:block;width:100%;object-fit:cover}
+.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+.topbar{padding:16px 0;border-bottom:1px solid var(--line);font-size:13px;color:var(--muted)}
+.topbar .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.brand{font-weight:750;letter-spacing:.06em;color:var(--green)}
+.hero{background:var(--cream);padding:58px 0 52px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:42px;align-items:center}
+.kicker{font-size:12px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:var(--green)}
+h1{font-size:clamp(36px,5vw,64px);line-height:1.18;letter-spacing:-.04em;margin:16px 0 22px;max-width:760px}
+.deck{font-size:18px;color:#52635a;max-width:660px}
+.hero-meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.pill{border:1px solid #cbd7c9;border-radius:999px;padding:6px 12px;font-size:12px;color:#40584a;background:#ffffff8c}
+.hero-img{height:440px;border-radius:8px;position:relative;overflow:hidden}
+.hero-img img{height:100%;filter:saturate(.78)}
+.img-label{position:absolute;bottom:0;left:0;right:0;padding:24px 20px 16px;color:white;background:linear-gradient(transparent,rgba(13,35,25,.8));font-size:12px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border-bottom:1px solid var(--line)}
+.stat{background:var(--paper);padding:25px 30px}
+.stat strong{display:block;font-size:30px;line-height:1.2;color:var(--green)}
+.stat span{font-size:13px;color:var(--muted)}
+main{padding:48px 0 70px}
+.layout{display:grid;grid-template-columns:220px minmax(0,1fr);gap:46px}
+nav{position:sticky;top:18px;align-self:start;border-top:2px solid var(--green);padding-top:14px}
+nav strong{display:block;margin-bottom:12px;font-size:13px}
+nav a{display:block;padding:5px 0;font-size:13px;text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--green)}
+section{scroll-margin-top:24px;margin-bottom:52px}
+.eyebrow{font-size:12px;color:var(--orange);font-weight:800;letter-spacing:.13em}
+h2{font-size:clamp(25px,3vw,36px);line-height:1.3;margin:7px 0 20px;letter-spacing:-.025em}
+h3{font-size:20px;line-height:1.4;margin:25px 0 8px}
+p{margin:0 0 16px}
+.lead{font-size:18px;color:#42594c}
+.photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:22px 0}
+.photo-card{border:1px solid var(--line);background:#fff;border-radius:7px;overflow:hidden}
+.photo-card img{height:190px}
+.photo-card div{padding:14px 16px}
+.photo-card h3{font-size:16px;margin:0 0 5px}
+.photo-card p{font-size:13px;color:var(--muted);margin:0}
+.note{background:#f2f5ee;border-left:3px solid var(--green);padding:15px 18px;margin:20px 0;font-size:14px}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px}thead th{position:sticky;top:51px;z-index:2}
+th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:#f1f4ed;font-size:12px;color:#4a5d50}
+td:last-child,th:last-child{text-align:right}
+.table-wrap{overflow-x:auto}
+.feature{display:grid;grid-template-columns:.8fr 1.2fr;gap:22px;align-items:start;margin:24px 0}
+.feature img{height:260px;border-radius:7px}
+.feature h3{margin-top:0}
+.caption{font-size:12px;color:var(--muted);margin-top:7px}
+.chart{display:grid;gap:13px;margin:22px 0}
+.bar-row{display:grid;grid-template-columns:110px 1fr 100px;align-items:center;gap:12px;font-size:13px}
+.track{height:18px;background:#edf0e9;border-radius:2px;overflow:hidden}
+.bar{height:100%;background:var(--green)}
+.bar-row b{text-align:right;font-variant-numeric:tabular-nums}
+.source-list li{margin:8px 0;overflow-wrap:anywhere}
+footer{background:#20382d;color:#e9f0e6;padding:35px 0}
+footer a{color:#d5e7b9}
+footer p{font-size:13px;color:#c3d1c5}
+.small{font-size:12px;color:var(--muted)}
+@media(max-width:800px){.hero-grid,.layout,.feature{grid-template-columns:1fr}.hero-img{height:300px}.layout{gap:24px}nav{position:static;display:grid;grid-template-columns:1fr 1fr;gap:0 14px}nav strong{grid-column:1/-1}.stats{grid-template-columns:1fr}.stat{padding:18px 22px}.photo-grid{grid-template-columns:1fr}.photo-card img{height:220px}.feature img{height:220px}}
+@media print{nav,.topbar{display:none}.hero{padding:25px 0}.layout{display:block}.hero-img{height:250px}a{color:inherit}}
+
+/* Interactive reading aids */
+.reader-tools{position:sticky;top:0;z-index:20;background:rgba(255,254,250,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.reader-tools .wrap{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:10px 0}
+.tool-btn{border:1px solid #cbd7c9;background:#fffefa;color:var(--green);border-radius:999px;padding:7px 13px;font:inherit;font-size:12px;cursor:pointer}
+.tool-btn:hover,.tool-btn[aria-pressed="true"]{background:var(--green);color:white}
+.progress-track{height:3px;background:#e6e9e1}
+#readingProgress{height:3px;width:0;background:var(--orange);transition:width .1s}
+.reading-status{font-size:12px;color:var(--muted);margin-left:auto}
+body.large-text{font-size:19px}
+body.large-text p,body.large-text li{line-height:2}
+body.large-text .small,body.large-text .caption{font-size:14px}
+body.focus-mode .layout{grid-template-columns:minmax(0,850px);justify-content:center}
+body.focus-mode nav{display:none}
+body.focus-mode .wrap{max-width:1000px}
+details.source-detail{border:1px solid var(--line);border-radius:6px;padding:12px 15px;margin:12px 0}
+details.source-detail summary{cursor:pointer;font-weight:700;color:var(--green)}
+.photo-card img,.feature img,.hero-img img{cursor:zoom-in}
+#imageViewer{position:fixed;inset:0;background:rgba(10,20,15,.88);z-index:100;display:none;align-items:center;justify-content:center;padding:24px}
+#imageViewer.open{display:flex}
+#imageViewer img{max-width:min(1100px,95vw);max-height:85vh;object-fit:contain;width:auto;border-radius:5px}
+#imageViewer button{position:absolute;top:20px;right:22px;background:#fff;border:0;border-radius:50%;width:42px;height:42px;font-size:24px;cursor:pointer}
+@media(max-width:800px){.reader-tools .wrap{gap:6px}.reading-status{width:100%;margin-left:0}.tool-btn{padding:7px 10px}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap"><span class="brand">環境教育國際觀察</span><span>專題報告｜資料基準：2026 年 10 月 12 日</span></div></div>
+<div class="reader-tools" aria-label="閱讀工具">
+ <div class="progress-track"><div id="readingProgress"></div></div>
+ <div class="wrap">
+  <button class="tool-btn" id="textSize" aria-pressed="false" type="button">A+ 放大文字</button>
+  <button class="tool-btn" id="focusMode" aria-pressed="false" type="button">專注閱讀</button>
+  <button class="tool-btn" id="expandSources" type="button">展開資料說明</button>
+  <button class="tool-btn" id="printPage" type="button">列印／存成 PDF</button>
+  <span class="reading-status" id="readingStatus">閱讀進度 0%</span>
+ </div>
+</div>
+<header class="hero">
+ <div class="wrap hero-grid">
+  <div>
+   <div class="kicker">NAAEE · 55th Annual Conference</div>
+   <h1>從自然學習<br>走向集體行動</h1>
+   <p class="deck">從開幕晚會、中餐交流與閉幕活動，到數位議程、講者安排及年會財務模式，觀察北美環境教育學會如何組織一場國際專業聚會。</p>
+   <div class="hero-meta"><span class="pill">Imagine If…</span><span class="pill">2026.10.6–10.9</span><span class="pill">Portland, Oregon</span></div>
+  </div>
+  <div class="hero-img">
+   <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1400&q=85" alt="山林與晨霧的自然景觀">
+   <div class="img-label">形象照片：自然景觀示意，非年會現場照片。圖片來源：Unsplash</div>
+  </div>
+ </div>
+</header>
+<div class="wrap stats">
+ <div class="stat"><strong>約 1,000 人</strong><span>官方會前公布的預估參與規模，非最終報到人數</span></div>
+ <div class="stat"><strong>300+ 場</strong><span>官方會前資料所述的交流活動規模</span></div>
+ <div class="stat"><strong>第 55 屆</strong><span>NAAEE 年度年會；同期舉辦第 23 屆研究研討會</span></div>
+</div>
+<main class="wrap">
+ <div class="layout">
+  <nav aria-label="文章目錄"><strong>本篇導覽</strong>
+   <a href="#intro">年會概況</a><a href="#program">議程與講者</a><a href="#events">晚會與中餐</a><a href="#digital">數位工具</a><a href="#fees">報名與贊助</a><a href="#estimate">收入情境推估</a><a href="#innovation">創新模式觀察</a><a href="#limits">資料限制</a><a href="#sources">原始資料</a>
+  </nav>
+  <article>
+   <section id="intro">
+    <div class="eyebrow">01 / OVERVIEW</div><h2>一場跨研究與實務的環境教育年會</h2>
+    <p class="lead">北美環境教育學會（North American Association for Environmental Education, NAAEE）第 55 屆年會於 2026 年 10 月 6 日至 9 日在美國奧勒岡州波特蘭舉行，主題為「Imagine If…」。第 23 屆研究研討會安排於 10 月 6 日至 7 日。</p>
+    <p>官方會前資料以約 1,000 名參與者、來自 50 個國家及 300 多場交流活動介紹本屆規模。這些是官方會前公布的規模資訊；在沒有最終統計前，不應改寫為實際報到人數或最終國家數。</p>
+    <p>議程涵蓋專題演講、研究發表、工作坊、圓桌討論、海報、展覽、戶外活動及交流活動。研究研討會與年會部分時段重疊，讓參與者有機會接觸不同形式的內容。</p>
+    <div class="note"><b>報導原則：</b>本文區分官方公布、已知制度與估算情境；未公開的實際人數、使用率、財務結算及活動成效，不以推測補足。</div>
+   </section>
+   <section id="program">
+    <div class="eyebrow">02 / PROGRAM</div><h2>講者背景跨越公共政策與公共溝通</h2>
+    <div class="photo-grid">
+     <div class="photo-card"><img loading="lazy" src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=900&q=80" alt="會議講台與演講空間示意"><div><h3>專題演講</h3><p>圖片為演講場景示意，非 NAAEE 年會現場照片。</p></div></div>
+     <div class="photo-card"><img loading="lazy" src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=900&q=80" alt="參與者交流情境示意"><div><h3>跨領域交流</h3><p>圖片為交流情境示意，非 NAAEE 年會現場照片。</p></div></div>
+    </div>
+    <p>官方議程列出的講者包括曾任美國國家公園管理局局長的 Charles「Chuck」Sams III、線上演講者 Baratunde Thurston，以及播客主持人 Nick Capodice 與 Hannah McCarthy。講者背景涵蓋公共機構與公共議題傳播等領域。</p>
+    <p>年會另安排 10 分鐘的 Bright Spots 短講，三場相關短講可在同一時段連續進行，之後留有簡短討論時間。這種形式以較短的時間呈現具體計畫、實務案例或研究發現。</p>
+    <p class="small">講者職歷與演講形式依官方議程介紹。本文不推定演講酬勞、實際參與人數或學習成效。</p>
+   </section>
+   <section id="events">
+    <div class="eyebrow">03 / SPECIAL EVENTS</div><h2>把交流安排進開幕、中餐與閉幕活動</h2>
+    <div class="feature">
+     <img loading="lazy" src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1000&q=80" alt="活動接待與餐敘場景示意">
+     <div><h3>開幕接待：展覽、海報與作者交流</h3><p>10 月 6 日下午的開幕接待結合展覽、研究海報、Share Fair 及 Authors’ Corner，之後接續開幕儀式與專題演講。官方提供小型展示方案，Share Fair 與 Authors’ Corner 公開價格各為 45 美元。</p><p class="small">圖片為活動接待示意，非年會現場照片。</p></div>
+    </div>
+    <div class="feature">
+     <img loading="lazy" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1000&q=80" alt="餐飲與用餐安排示意">
+     <div><h3>展覽午餐：用餐時段結合展覽與分會交流</h3><p>10 月 7 日中午安排 Exhibit Luncheon and Affiliate Expo，將午餐、展覽參觀與各州分會交流安排在同一時段。官方報名資訊將該場午餐納入相關票種權益。</p><p class="small">圖片為餐飲示意，非年會實際菜色或餐廳照片。</p></div>
+    </div>
+    <div class="feature">
+     <img loading="lazy" src="https://images.unsplash.com/photo-1561214115-f2f134cc4912?auto=format&fit=crop&w=1000&q=80" alt="博物館展覽空間示意">
+     <div><h3>閉幕慶祝：使用地方科學教育場館</h3><p>10 月 8 日晚間的閉幕慶祝活動安排於奧勒岡科學與工業博物館（OMSI），活動內容包括展廳、天文館及 USS Blueback 潛艇參觀，並提供交通接駁。官方資訊指出，活動已包含在年度年會票中。</p><p class="small">圖片為博物館／展覽空間示意，非 OMSI 實景。</p></div>
+    </div>
+    <p>這些安排可以確認年會把展示、出版交流、餐飲與地方教育場館納入活動流程；實際餐飲成本、場地費、參加人數與交流成效，仍需另行查證。</p>
+   </section>
+   <section id="digital">
+    <div class="eyebrow">04 / DIGITAL EXPERIENCE</div><h2>以數位平台整合議程與參與者資訊</h2>
+    <div class="photo-grid">
+     <div class="photo-card"><img loading="lazy" src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=900&q=80" alt="手機使用情境示意"><div><h3>個人行程與議程查詢</h3><p>平台提供完整議程與個人行程功能。</p></div></div>
+     <div class="photo-card"><img loading="lazy" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="數位工作與交流示意"><div><h3>參與者搜尋與數位名片</h3><p>官方說明列出參與者搜尋、私訊與數位名片等功能。</p></div></div>
+    </div>
+    <p>NAAEE 使用 CrowdComms 平台提供議程查詢、個人行程、參與者搜尋、私訊、數位名片及 AI 媒合等功能。官方 FAQ 也說明，完整議程不再提供印刷版本，參與者透過數位平台查詢活動。</p>
+    <p>目前可確認的是平台功能與無紙化議程的安排。登入人數、實際使用率、AI 媒合數量、平台費用及使用者回饋尚未取得，不能由功能清單推定成效。</p>
+   </section>
+   <section id="fees">
+    <div class="eyebrow">05 / REGISTRATION & SPONSORSHIP</div><h2>報名、展位與贊助制度</h2>
+    <div class="table-wrap"><table><thead><tr><th>報名項目</th><th>公開價格（美元）</th></tr></thead><tbody>
+     <tr><td>年會會員票</td><td>$595</td></tr><tr><td>年會非會員票</td><td>$715</td></tr><tr><td>年會單日票</td><td>$250</td></tr><tr><td>研究研討會會員票</td><td>$355</td></tr><tr><td>研究研討會非會員票</td><td>$400</td></tr><tr><td>年會＋研究研討會會員套票</td><td>$780</td></tr><tr><td>年會＋研究研討會非會員套票</td><td>$925</td></tr>
+    </tbody></table></div>
+    <p>官方另提供學生與退休人士折扣，以及同一組織五人以上報名的團體折扣。不同折扣不能合併使用；官方也設有獎學金與經濟補助申請機制。</p>
+    <div class="table-wrap"><table><thead><tr><th>展位／贊助項目</th><th>公開價格（美元）</th></tr></thead><tbody>
+     <tr><td>非營利組織／政府展位</td><td>$900</td></tr><tr><td>商業／企業展位</td><td>$1,250</td></tr><tr><td>Green 贊助級別</td><td>$5,000</td></tr><tr><td>Silver 贊助級別</td><td>$10,000</td></tr><tr><td>Gold 贊助級別</td><td>$15,000</td></tr><tr><td>Platinum 贊助級別</td><td>$25,000</td></tr>
+    </tbody></table></div>
+    <p class="small">公開價格是方案資訊，不代表實際售出數、成交贊助額或年會最終收入。附加服務的適用條件與價格，刊出前應以官方文件再次核對。</p>
+   </section>
+   <section id="estimate">
+    <div class="eyebrow">06 / REVENUE SCENARIOS</div><h2>報名收入情境推估</h2>
+    <p>以官方會前公布的約 1,000 人作為規模基準，假設每位參與者平均實收報名費不同，得到以下情境。這不是 NAAEE 的實際營收。</p>
+    <div class="chart">
+     <div class="bar-row"><span>平均 $400</span><div class="track"><div class="bar" style="width:57.14%"></div></div><b>$400,000</b></div>
+     <div class="bar-row"><span>平均 $500</span><div class="track"><div class="bar" style="width:71.43%"></div></div><b>$500,000</b></div>
+     <div class="bar-row"><span>平均 $600</span><div class="track"><div class="bar" style="width:85.71%"></div></div><b>$600,000</b></div>
+     <div class="bar-row"><span>平均 $700</span><div class="track"><div class="bar" style="width:100%"></div></div><b>$700,000</b></div>
+    </div>
+    <p>實際報名收入會受到會員票、非會員票、單日票、研究研討會票、套票、折扣與退款影響。展位與贊助收入應另外依實際成交數計算，不能直接把所有公開方案價格相加。</p>
+    <div class="note"><b>解讀方式：</b>目前可以呈現不同假設下的報名收入範圍；尚未取得票種銷售結構與財務結算前，不推估年會盈餘或財務永續程度。</div>
+   </section>
+   <section id="innovation">
+    <div class="eyebrow">07 / PRACTICES TO COMPARE</div><h2>值得與臺灣辦理方式逐項對照的設計</h2>
+    <p>以下不是優劣排名，而是可供後續查證與比較的具體案例。</p>
+    <div class="table-wrap"><table><thead><tr><th>觀察項目</th><th>本屆已知做法</th><th>後續可比較的資料</th></tr></thead><tbody>
+     <tr><td>開幕活動</td><td>展覽、海報、Share Fair、作者交流與專題演講串接</td><td>流程、場地配置、參展數、成本</td></tr>
+     <tr><td>中餐安排</td><td>午餐與展覽、分會交流同時進行</td><td>餐飲單價、參與人數、動線與票價涵蓋</td></tr>
+     <tr><td>閉幕活動</td><td>使用 OMSI 科學教育場館並安排接駁</td><td>場地合作、交通、保險及活動支出</td></tr>
+     <tr><td>講者組合</td><td>公共機構、公共溝通與線上演講等不同背景</td><td>邀請方式、演講形式、差旅與酬勞</td></tr>
+     <tr><td>數位服務</td><td>議程、個人行程、私訊、數位名片與 AI 媒合</td><td>平台費用、使用率與使用者回饋</td></tr>
+     <tr><td>收入來源</td><td>報名、展位、附加服務與多級贊助方案</td><td>實際成交額、收入占比與支出結構</td></tr>
+    </tbody></table></div>
+    <p>比較時應選取規模與性質相近的臺灣年會或研討會，使用相同的指標記錄。未取得臺灣對應資料時，保留待查，不直接宣稱臺灣沒有相同做法。</p>
+   </section>
+   <section id="limits">
+    <div class="eyebrow">08 / WHAT WE STILL DON'T KNOW</div><h2>公開資料的範圍與限制</h2>
+    <p>目前官方資料可支持對活動日期、主題、議程、公開票價、展位方案與平台功能的描述。以下項目仍需官方結算、現場紀錄或訪談補充：</p>
+    <ul>
+     <li>最終實際報到人數、參與者國家數與各票種人數。</li>
+     <li>展商與贊助者實際數量、贊助成交金額及收入占比。</li>
+     <li>餐飲、場地、交通、講者、數位平台與人力成本。</li>
+     <li>獎學金與經濟補助實際發放情形。</li>
+     <li>平台登入率、功能使用率與參與者實際回饋。</li>
+     <li>各活動實際參加人數及會後學習或合作成果。</li>
+    </ul>
+    <p>因此，本文不將制度安排直接等同於成效，也不將會前預估人數寫成最終出席統計。</p>
+   </section>
+   <section id="sources">
+    <div class="eyebrow">SOURCES</div><h2>官方原始資料</h2>
+    <ul class="source-list">
+     <li><a href="https://conference.naaee.org/" target="_blank" rel="noopener">NAAEE 2026 年會主頁</a></li>
+     <li><a href="https://conference.naaee.org/conference" target="_blank" rel="noopener">年會介紹與專題演講</a></li>
+     <li><a href="https://conference.naaee.org/schedule-glance" target="_blank" rel="noopener">議程概覽</a></li>
+     <li><a href="https://conference.naaee.org/conference/special-events" target="_blank" rel="noopener">特別活動與晚會</a></li>
+     <li><a href="https://conference.naaee.org/register" target="_blank" rel="noopener">報名價格與票種權益</a></li>
+     <li><a href="https://conference.naaee.org/faq" target="_blank" rel="noopener">年會常見問題</a></li>
+     <li><a href="https://conference.naaee.org/about/using-conference-platform" target="_blank" rel="noopener">CrowdComms 平台說明</a></li>
+     <li><a href="https://conference.naaee.org/sites/default/files/2026-03/Sponsor-Packet-2026-Acc.pdf" target="_blank" rel="noopener">官方贊助方案 PDF</a></li>
+     <li><a href="https://naaee.org/news/press-room/portland-proclaims-environmental-education-week-ahead-55th-annual-conference" target="_blank" rel="noopener">NAAEE／波特蘭市：環境教育週公告（2026 年 9 月 29 日）</a></li>
+    </ul>
+    <p class="small">圖片說明：頁面使用 Unsplash 圖片作為主題示意，並非 NAAEE 2026 年會的現場照片。正式公開前，建議以取得授權的官方年會照片、場館照片或臺灣團隊自行拍攝的影像替換，並補上攝影者與授權資訊。</p>
+   </section>
+  </article>
+ </div>
+</main>
+<footer><div class="wrap"><p><b>環境教育國際觀察｜NAAEE 第 55 屆年會</b></p><p>本文供臺灣讀者理解國際環境教育年會的活動設計與運作方式。公開數據、估算情境與待查證事項分開呈現；正式刊登前應再核對原始資料與最新修正。</p><p><a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">回到頁首 ↑</a></p></div></footer>
+
+<div id="imageViewer" role="dialog" aria-modal="true" aria-label="圖片放大檢視"><button type="button" id="closeViewer" aria-label="關閉圖片">×</button><img id="viewerImage" alt=""></div>
+<script>
+(function(){
+ const body=document.body;
+ const sizeBtn=document.getElementById('textSize');
+ const focusBtn=document.getElementById('focusMode');
+ const expandBtn=document.getElementById('expandSources');
+ const printBtn=document.getElementById('printPage');
+ const progress=document.getElementById('readingProgress');
+ const status=document.getElementById('readingStatus');
+ sizeBtn.addEventListener('click',()=>{
+   const active=body.classList.toggle('large-text');
+   sizeBtn.setAttribute('aria-pressed',String(active));
+   sizeBtn.textContent=active?'A− 恢復文字':'A+ 放大文字';
+ });
+ focusBtn.addEventListener('click',()=>{
+   const active=body.classList.toggle('focus-mode');
+   focusBtn.setAttribute('aria-pressed',String(active));
+   focusBtn.textContent=active?'恢復文章目錄':'專注閱讀';
+ });
+ expandBtn.addEventListener('click',()=>{
+   const items=[...document.querySelectorAll('details.source-detail')];
+   if(!items.length){expandBtn.textContent='資料說明已直接列出';return;}
+   const shouldOpen=items.some(x=>!x.open);
+   items.forEach(x=>x.open=shouldOpen);
+   expandBtn.textContent=shouldOpen?'收合資料說明':'展開資料說明';
+ });
+ printBtn.addEventListener('click',()=>window.print());
+ function updateProgress(){
+   const max=document.documentElement.scrollHeight-window.innerHeight;
+   const value=max>0?Math.round(window.scrollY/max*100):100;
+   progress.style.width=value+'%';
+   status.textContent='閱讀進度 '+value+'%';
+ }
+ window.addEventListener('scroll',updateProgress,{passive:true});
+ window.addEventListener('resize',updateProgress);
+ updateProgress();
+
+ const viewer=document.getElementById('imageViewer');
+ const viewerImage=document.getElementById('viewerImage');
+ const closeViewer=()=>{viewer.classList.remove('open');viewerImage.src='';body.style.overflow='';};
+ document.querySelectorAll('.hero-img img,.photo-card img,.feature img').forEach(img=>{
+   img.tabIndex=0;
+   img.setAttribute('role','button');
+   img.setAttribute('aria-label',(img.alt||'圖片')+'；點擊放大');
+   img.addEventListener('click',()=>{
+     viewerImage.src=img.src;viewerImage.alt=img.alt;
+     viewer.classList.add('open');body.style.overflow='hidden';
+   });
+   img.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();img.click();}});
+ });
+ document.getElementById('closeViewer').addEventListener('click',closeViewer);
+ viewer.addEventListener('click',e=>{if(e.target===viewer)closeViewer();});
+ window.addEventListener('keydown',e=>{if(e.key==='Escape')closeViewer();});
+})();
+</script>
+
+</body>
+</html>
